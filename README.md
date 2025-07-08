@@ -1,4 +1,9 @@
 # Reservation-system
+
+研究室や会社の装置、会議室の予約システムです。
+
+Googleカレンダーよりも使いやすいことを目標にしました。
+
 Preparation: database (MySQL), server
 
 必要なもの: データベース (MySQL), サーバー（スターレンタルサーバーが無料です, MySQLもつかえます）
