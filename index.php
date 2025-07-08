@@ -113,12 +113,6 @@ $rooms = $db->query("SELECT id, name FROM rooms ORDER BY name")->fetchAll();
             <div class="nav-item" data-target="all-reservations">
                 <span><span class="material-symbols-outlined" style="vertical-align: bottom; margin-right: 0.5rem;">grid_view</span>全予約表示</span>
             </div>
-            <a href="https://reserve.material.tohoku.ac.jp/" target="_blank" class="nav-item">
-                <span><span class="material-symbols-outlined" style="vertical-align: bottom; margin-right: 0.5rem;">science</span>マテ装置（学内のみ）</span>
-            </a>
-            <a href="http://130.34.94.185/reserve/index.html" target="_blank" class="nav-item">
-                <span><span class="material-symbols-outlined" style="vertical-align: bottom; margin-right: 0.5rem;">memory</span>MNC（学内のみ）</span>
-            </a>
             <hr style="margin: 0.5rem 0;">
             <?php foreach($rooms as $r): ?>
               <div class="nav-item room-item" data-room-id="<?= $r['id'] ?>">
@@ -172,8 +166,6 @@ $rooms = $db->query("SELECT id, name FROM rooms ORDER BY name")->fetchAll();
         activateNavItem($(this));
         loadIntoFrame('all_reservations.php');
     });
-
-    // ★★★ 「マテ装置」タブ用のJavaScript処理を削除 ★★★
 
     $roomList.on('click', '.room-item', function(e) {
       e.preventDefault();
